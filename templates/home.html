@@ -1,0 +1,28 @@
+{%if user.is_authenticated%}
+<div class="alert alert-success"role="alert">
+    <img src="static/slide/2.jpg" class="img-fluid" alt="...">
+    <h3>Welcome To Home </h3>
+
+    <h2>Display</h2>
+    <table  border="2">
+        {%for x in data%}
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.firstname}}</td>
+            <td>{{x.lastname}}</td>
+            <td>{{x.emailid}}</td>
+            <td>{{x.mobileno}}</td>
+            <td>{{x.gender}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+{% else %}
+<div class="alert alert-success"role="alert">
+    <h3>Welcome!</h3>
+    <a href='{%url 'register'%}'>Singnup</a>
+    <a href='{%url 'login'%}'>Login</a>
+</div>
+{%endif%}
+
+    

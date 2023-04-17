@@ -1,0 +1,7 @@
+<h3>Login</h3>
+<form action="" method="POST">
+    {%csrf_token%}
+    {{form}}
+<button type="submit">Login</button>
+</form>
+<p>Don't have an account? <a herf="{%url 'register'%}">signup here</a></p>
